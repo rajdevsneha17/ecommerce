@@ -43,15 +43,15 @@ const PORT = process.env.PORT || 7000;
 
 //Configure CORS to allow requests from your frontend
 app.use(cors({
-    origin: "*",
+    origin: "https://ecommercfront.vercel.app",
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
 }));
 
 // Middleware to handle CORS preflight requests
-app.options('https://ecommercfront.vercel.app/', cors({
-    origin: "*",
+app.options('*', cors({
+    origin: "https://ecommercfront.vercel.app",
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
