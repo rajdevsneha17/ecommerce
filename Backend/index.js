@@ -41,21 +41,21 @@ const dbconnect = require('./config/database');
 const app = express();
 const PORT = process.env.PORT || 7000;
 
-// Configure CORS to allow requests from your frontend
-// app.use(cors({
-//     origin: "*",
-//     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-//     allowedHeaders: ['Content-Type', 'Authorization'],
-//     credentials: true
-// }));
+//Configure CORS to allow requests from your frontend
+app.use(cors({
+    origin: "*",
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true
+}));
 
-// // Middleware to handle CORS preflight requests
-// app.options('*', cors({
-//     origin: "*",
-//     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-//     allowedHeaders: ['Content-Type', 'Authorization'],
-//     credentials: true
-// }));
+// Middleware to handle CORS preflight requests
+app.options('*', cors({
+    origin: "*",
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true
+}));
 
 app.use(cors())
 
