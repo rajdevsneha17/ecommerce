@@ -50,7 +50,7 @@ app.use(cors({
 }));
 
 // Middleware to handle CORS preflight requests
-app.options('*', cors({
+app.options('https://ecommercfront.vercel.app/', cors({
     origin: "*",
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
