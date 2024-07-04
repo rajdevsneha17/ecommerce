@@ -46,6 +46,7 @@ app.use(cors({
     origin: "https://ecommercfront.vercel.app",
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization'],
+    AccessControlAllowOrigin:'*',
     credentials: true
 }));
 
